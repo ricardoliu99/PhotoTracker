@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/photoListFragment">
+    <fragment
+        android:id="@+id/addPhotoFragment"
+        android:name="com.example.phototracker.ui.AddPhotoFragment"
+        android:label="@string/new_item"
+        tools:layout="@layout/fragment_add_photo">
+        <action
+            android:id="@+id/action_addPhotoFragment_to_photoListFragment"
+            app:destination="@id/photoListFragment" />
+        <action
+            android:id="@+id/action_addPhotoFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photoListFragment"
+        android:name="com.example.phototracker.ui.PhotoListFragment"
+        android:label="@string/photos"
+        tools:layout="@layout/fragment_photo_list">
+        <action
+            android:id="@+id/action_photoListFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+        <action
+            android:id="@+id/action_photoListFragment_to_editPhotoFragment"
+            app:destination="@id/editPhotoFragment" />
+        <action
+            android:id="@+id/action_photoListFragment_to_fullImageFragment"
+            app:destination="@id/fullImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.phototracker.ui.MapFragment"
+        android:label="@string/locations"
+        tools:layout="@layout/fragment_map">
+        <argument
+            android:name="lat"
+            app:argType="float" />
+        <argument
+            android:name="lon"
+            app:argType="float" />
+        <argument android:name="locName" />
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.phototracker.ui.CameraFragment"
+        android:label="@string/take_photo">
+        <action
+            android:id="@+id/action_cameraFragment_to_addPhotoFragment"
+            app:destination="@id/addPhotoFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/editPhotoFragment"
+        android:name="com.example.phototracker.ui.EditPhotoFragment"
+        android:label="@string/edit_item">
+        <action
+            android:id="@+id/action_editPhotoFragment_to_photoListFragment"
+            app:destination="@id/photoListFragment" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+    </dialog>
+    <fragment
+        android:id="@+id/fullImageFragment"
+        android:name="com.example.phototracker.ui.FullImageFragment"
+        android:label="@string/full_image">
+
+        <argument android:name="uri" />
+    </fragment>
+</navigation>

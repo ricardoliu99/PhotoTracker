@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PhotoTracker</string>
+    <string name="new_item">New Item</string>
+    <string name="locations">Location</string>
+    <string name="photos">Photos</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="secondary_text">"Location: %1$s\nDate: %2$s"</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="save">SAVE</string>
+    <string name="cancel">CANCEL</string>
+    <string name="edit_item">Edit Item</string>
+    <string name="full_image">Full Image</string>
+</resources>
