@@ -1,4 +1,4 @@
-### PhotoTracker  
+# PhotoTracker  
 Android mobile app that allows users to take photos, view them, and record their location. 
 
 ## Application process
