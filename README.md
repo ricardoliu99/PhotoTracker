@@ -2,7 +2,7 @@
 Android mobile app that allows users to take photos, view them, and record their location. You can download the APK of the app here: [link](https://docs.google.com/uc?export=download&id=1VFyhvJHVMwDRoRdVdwSFvmKY5MUtIPVJ)
 
 ## Application process
-The backend was written in Kotlin and the frontend was written in XML. It consists of one main activity and six fragments. A navigation graph was used for navigating through the different fragments. For data persistence, the Room library was used. FusedLocationProviderClient API from Google Play Services was used for location tracking, Geocoder was used to find out the location name, and Google Maps API was used to provide a map to visually represent the locations. To optimize data loading, the Coil library was used to load the images. CameraX library was used to provide the photo taking functionality.
+The backend was written in Kotlin and the frontend was written in XML. It consists of one main activity and six fragments. A navigation graph was used for navigating through the different fragments. For data persistence, the Room library was used. Fused Location Provider API from Google Play Services was used for location tracking, Geocoder was used to find out the location name, and Google Maps API was used to provide a map to visually represent the locations. To optimize data loading, the Coil library was used to load the images. CameraX library was used to provide the photo taking functionality.
 
 ## Demo
 When the user first opens the application, they will prompted to grant access to the device's camera, location and photos. In addition to granting these permissions, the user must turn on their device location manually.
